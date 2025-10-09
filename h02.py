@@ -34,7 +34,7 @@ turtle.circle(50)
 
 turtle.pencolor("green")
 turtle.penup()
-turtle.goto(55,-45)
+turtle.goto(55,-55)
 turtle.pendown()
 turtle.circle(50)
 
