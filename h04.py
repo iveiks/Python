@@ -1,4 +1,30 @@
+import turtle
+
+# Ringi pindala ja Turtle
+
+# Kirjuta programm, mis kasutab Turtle graafikat joonistamaks ringi ning arvutab ja kuvab konsoolis ringi pindala ja ümbermõõdu.
+# Programm küsib kasutajalt ringi raadiuse.
+# Kasuta ** operaatorit raadiuse ruudu arvutamiseks ja π väärtusena 3.14.
+# Lisa veakontroll, et kontrollida kasutaja sisestatud raadiuse korrektsust.
+# Väljasta lause, kasutades f-string vormindamist ja ümardamist 2 komakohta
+# Näide:
+# Kasutaja sisestab: 5
+# Programm väljastab konsoolis: Ringi pindala on 78.5 ja ümbermõõt on 31.4
+# Turtle graafika joonistab vastava ringi
+try:
+    raadius = float(input("Ringi raadius: "))
+    s = 3.14 * raadius ** 2
+    p = 2 * 3.14 * raadius
+    print(f"Ringi pindala on {s:0.2f} ja ümbermõõt on {p:0.2f}")   
+    turtle.circle(raadius)
+except:
+    print("Kontrolli sisestust!")
+    
+ 
+    
+turtle.done()
 # Kingituste pakkimine
+
 # Sa töötad kingipoes ja sinu ülesanne on pakkida kingitusi.
 # Igasse kinkekarpi mahub täpselt 5 kingitust.
 # Sinu ülesandeks on arvutada, mitu täis kinkekasti saad teha ja mitu kingitust jääb üle, kui need kõik ei mahu karpidesse.
@@ -23,6 +49,7 @@ except:
 
 
 # Raamatute allahindlus
+
 # Raamatupoes on 30% soodusmüük.
 # Kirjuta programm, mis küsib kasutajalt soovitud raamatute arvu ja arvutab nende kogumaksumuse, kui iga raamatu tavahind on 12,53€.
 # Väljasta lause, kasutades f-string vormindamist ja ümardamist 2 komakohta
@@ -39,6 +66,7 @@ print(f"{kogus} raamatu hind soodustusega on {summa:0.2f}.")
 
 
 # Aia pikkus
+
 # Kirjuta programm, mis aitab aiapidajal arvutada aia ümbermõõtu.
 # Aed on ristküliku kujuline. (a+b)*2 = P
 # Programm peaks küsima kasutajalt kahe aiaosa pikkused meetrites ja seejärel arvutama aia kogupikkuse.
@@ -52,3 +80,4 @@ b = int(input("Külg 2 (meetrit): "))
 
 p = (a+b)*2
 print(f"Aia ümbermõõt on {p} meetrit.")
+
