@@ -1,4 +1,29 @@
 import random
+import turtle
+
+# Mündiviskamise äraarvamine koos juhuslikkusega (and ja or)
+
+# Kirjuta programm, mis simuleerib mündiviskamist. Programm genereerib juhusliku tulemuse – “kiri” või “kull”, kasutades random.randint(0,1) funktsiooni.
+# Programmi koostamisel pead importima import random mooduli ja kasutama randint() funktsiooni,
+# et valida kahe võimaliku tulemuse vahel. Näiteks, kui randint(0, 1) annab tulemuseks 0, siis võib see tähendada “kirja”, ja 1 võib tähendada “kulli”.
+# Seejärel palub programm kasutajal arvata, kumb külg maandub ülespoole.
+# Kasuta if lauset, et kontrollida, kas kasutaja arvas õigesti. Kui arvas õigesti, siis joonista Turtle abil roheline ring; kui valesti, siis punane ring.
+
+# 0 - kiri
+# 1 - kull
+tulemus = random.randint(0,1)
+ennustus = int(input("0 - kiri | 1 - kull: "))
+print(f"Münt: {tulemus}")
+turtle.speed(0)
+if tulemus == ennustus:
+    turtle.color("green")
+    turtle.circle(100)
+else:
+    turtle.color("red")
+    turtle.circle(100)
+
+turtle.done()
+
 # Matemaatika test (randint)
 
 # Kirjuta programm, mis kontrollib kasutaja poolt sisestatud vastust lihtsale matemaatikaülesandele.
