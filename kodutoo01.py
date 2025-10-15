@@ -4,6 +4,35 @@
 # kood mis teavitab paaris või paaritust arvust - 1p
 # kuvatakse programmi pealkiri - 1p
 # kood kommenteeritud - 1p
+
+print(20*"-","Paaris | Paaritu",20*"-")
+try:
+  # Kasutaja sisestab arvu
+  arv = int(input("Sisesta arv: "))
+
+# Juhuks kui kasutaja sisestas midagi muud kui numbri
+except:
+  print("Sisesta arv!")
+
+else:
+
+  # Arvutab jäägi. Paaris arvu jääk on 0
+  vastus = arv % 2
+
+  # Kuna "vastus" muutujat enam vaja ei lähe siis kasutan seda kokkuhoiu ja lihtsuse huvides ära ning
+  # salvestan vastuse sinna.
+  if vastus == 0:
+    vastus = "paaris"
+  else:
+    vastus = "paaritu"
+
+  # Prindin konsooli vastuse.
+  if arv == 0:
+    print("Null pole number!")
+  else:
+    print(f"Sinu sisestatud arv on {vastus}.")
+
+
 # 2. Eurokalkulaator - koosta programm, mis kalkuleerib valuuta vastavalt kasutaja soovile EUR->EEK või EEK->EUR.
 # kuvatakse korrektne arusaadav küsimus ja vastus - 1p
 # kuvatakse veateade, kui kasutaja tegi valiku valesti - 1p
