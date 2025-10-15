@@ -5,6 +5,7 @@
 # kuvatakse programmi pealkiri - 1p
 # kood kommenteeritud - 1p
 
+# Programmi pealkiri
 print(20*"-","Paaris | Paaritu",20*"-")
 try:
   # Kasutaja sisestab arvu
@@ -38,6 +39,44 @@ else:
 # kuvatakse veateade, kui kasutaja tegi valiku valesti - 1p
 # küsitakse valuuta kogust ja tehakse arvutused - 2p
 # kood kommenteeritud - 1p
+
+# Euro kurss
+eek = 15.6466
+
+# Programmi pealkiri
+print(20*"-","EUROKALKULAATOR",20*"-")
+
+# Valikuvariandid
+print("Tee valik:")
+print("1. EUR->EEK")
+print("2. EEK->EUR")
+
+
+valik = int(input("Sinu valik (1/2): "))
+if valik == 1:
+  print("EUR->EEK")
+elif valik == 2:
+  print("EEK->EUR")
+# Ütleb kui valid valesti
+elif valik < 1 or valik > 2:
+  print("Oled teinud kummalise valiku!")
+
+# Küsib raha kogust
+summa = float(input("Raha kogus: "))
+
+# Teeb arvutused
+if valik == 1:
+  loppSumma = summa * eek
+  valuuta = "EEK"
+elif valik == 2:
+  loppSumma = summa / eek
+  valuuta = "€"
+
+# Prindib ilusa vastuse
+print(f"{loppSumma:0.2f} {valuuta}")
+
+
+
 # 3. Täringud
 # kuvatakse korrektne arusaadav küsimus ja hiljem vastus - 1p
 # kasutaja võistleb kahe täringuga arvuti vastu - 1p
