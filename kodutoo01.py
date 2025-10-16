@@ -1,3 +1,5 @@
+import random
+
 # 1. Koosta programm, mis kontrollib, kas kasutaja poolt sisestatud arv on paaris või paaritu
 # kuvatakse korrektne arusaadav küsimus ja vastus - 1p
 # eelnev kontroll, kas kasutaja ei lisanud arvu või pani nulli - 1p
@@ -41,7 +43,7 @@ else:
 # kood kommenteeritud - 1p
 
 # Euro kurss
-eek = 15.6466
+kurss = 15.6466
 
 # Programmi pealkiri
 print(20*"-","EUROKALKULAATOR",20*"-")
@@ -66,10 +68,10 @@ summa = float(input("Raha kogus: "))
 
 # Teeb arvutused
 if valik == 1:
-  loppSumma = summa * eek
+  loppSumma = summa * kurss
   valuuta = "EEK"
 elif valik == 2:
-  loppSumma = summa / eek
+  loppSumma = summa / kurss
   valuuta = "€"
 
 # Prindib ilusa vastuse
@@ -82,6 +84,38 @@ print(f"{loppSumma:0.2f} {valuuta}")
 # kasutaja võistleb kahe täringuga arvuti vastu - 1p
 # kasutaja teeb pakkumise ning suurima täringupunktisumma võitja saab laual oleva raha endale - 2p
 # kood kommenteeritud - 1p
+
+# Programmi pealkiri ja mängu seletus
+print(20*"-","TÄRINGUMÄNG",20*"-")
+print("Veeretad kahte täringut, seega võimalik veeretada 2 - 12.")
+print("Tee oma panus vastavalt!")
+
+try:
+  # Veeretab kasutajale ja arvutile suvalised numbrid kahe täringuga, ehk siis 2 - 12
+  kasutaja = random.randint(2,12)
+  arvuti = random.randint(2,12)
+
+  # Ütleb kasutajale mis ta veeretas ning küsib mis summa peale ta mängida tahab ja korrutab selle kahega (arvuti panus kah otsa,
+  # oletame et ta "callib")
+  print(f"Sinu täringud teevad kokku {kasutaja}")
+  pot = int(input("Tee oma panus: ")) * 2
+
+  # Kui kasutaja veeretas suurema summa, siis ta võitis
+  if kasutaja > arvuti:
+    print(f"Arvuti veeretas {arvuti}. Sina võitsid. Saad {pot}€")
+  # Kui arvuti veeretas suurema summa, siis tema võitis
+  elif kasutaja < arvuti:
+    print(f"Arvuti veeretas {arvuti}, sina kaotasid. Jäid rahast ilma.")
+  # Kui ei ole üks ega teine suurem, on nad järelikult samad = tekkis viik ja soovitatakse uut mängu
+  else:
+    print("Viik. Uued panused ja uus mäng!")
+
+# Kui peaks mingi error olema, tuleb errori asemel ilus kiri (hetkel ei näe mis errori põhjustas)
+except:
+  print("Pekki läks")
+
+
+
 # 4. Emaili kontroll
 # kasutaja lisab emaili kujul enimi.pnimi@server.com - 1p
 # programm kontrollib kas email on sisestatud õigesti - vähemalt @-märgi kontroll - 1p
