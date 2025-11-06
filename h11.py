@@ -7,10 +7,10 @@
 def sarnased_esitahed(s):
     s1, s2 = s.split(" ")
 
-    if (s1[0]) == (s2[0]):
+    if (s1[0].capitalize()) == (s2[0].capitalize()):
         return True
     else:
         return False
     
-print(sarnased_esitahed('Vapper Vares')) # peaks tagastama True
-print(sarnased_esitahed('Lahe Känguru')) # peaks tagastama False
+print(sarnased_esitahed('vapper Vares')) # tagastab True
+print(sarnased_esitahed('Lahe Känguru')) # tagastab False
