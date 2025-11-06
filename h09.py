@@ -1,5 +1,9 @@
 # Harjutus 09
 
+# 13. Mitmemõõtmelise massiivi kasutamine for-tsükliga
+# Tutvu elektriautode nimekirjaga, mis sisaldab 10 elektriauto mudelit, nende läbisõidu ulatust ja hinda.
+# Mõista, kuidas andmed on struktureeritud.
+
 ev_data = [
 ['vehicle', 'range', 'price'],
 ['Tesla Model Y Long Range', '330', '58990'],
@@ -52,6 +56,11 @@ for i in ev_data:
 print(f"Parim auto {parim_auto}")
 
 
+
+# 4. Kuva arvud 1-42
+# Arvud, mis jagunevad 3, lisa tekst TIK (näiteks 3 TIK)
+# Arvud, mis jagunevad 5, lisa tekst TAK (näiteks 5 TAK)
+# Kui jagunevad mõlemaga, siis lisa tekst TIKTAK (näiteks 15 TIKTAK)
 
 for i in range(1,21):
     if i%15 == 0:
