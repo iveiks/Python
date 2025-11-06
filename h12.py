@@ -24,7 +24,7 @@ def konto_haldur(tehing, raha, saldo):
         
     Näide:
         >>> konto = konto_haldur("deposiit", 50, konto)
-        konto = konto_haldur("maha", 250, konto)
+        >>> konto = konto_haldur("maha", 250, konto)
     """
 
 
